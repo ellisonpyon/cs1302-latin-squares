@@ -137,13 +137,13 @@ as closely as possible.
 If a user wishes to play a game of Latin Squares, they should be
 able to by typing in the following command at the shell prompt:
 ```
-$ java -cp bin cs1302.game.LatinSquares config.txt 
+$ java -cp bin cs1302.game.LatinSquaresDriver config.txt 
 ```
 where 
 
 * `-cp bin` denotes that the class path to the compiled version
   of the game's default package is `bin`, 
-* `cs1302.game.LatinSquares` denotes the fully qualified name of
+* `cs1302.game.LatinSquaresDriver` denotes the fully qualified name of
   the game's driver class, and
 * `config.txt` is the path to a text file that provides the game's 
   starting configuration. 
@@ -261,6 +261,9 @@ vertical bars in order to help with readability. In this
 particular examplem the user has placed a `y` in location 
 (1, 0), probably during their first move.
 
+Examples of complete game input/output are provided in the appendix 
+of this document.
+
 #### Prompting the User
 
 Your game will display a prompt to the user at which the
@@ -300,8 +303,9 @@ of this document.
 #### Win Message
 
 Every time the contents of the square is updated, the game
-should check to see if it is a latin square. If so, then
-the game is over and the following text should be displayed:
+should check to see if it is a latin square. If so, the
+the game is over. Before the game exits, the final square is 
+displayed, followed by this congratulatory text:
 ```
                                  .''.
        .''.             *''*    :_\/_:     . 
@@ -318,10 +322,12 @@ the game is over and the following text should be displayed:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     CONGRATULATIONS! YOU COMPLETED THE LATIN SQUARE!
 ```
-
 Take note that some of the characters in the text above
 may need to be escaped when stored in a string literal
 in Java.
+
+Examples of complete game input/output are provided in the appendix 
+of this document.
 
 #### Game Loop
 
@@ -343,24 +349,51 @@ of this document.
 
 A functional requirement is *added* to your point total if satisfied.
 
-TODO
+* **(20 points) `cs1302.game.LatinSquaresGame` Class**:
+
+* **(20 points) `cs1302.game.LatinSquaresDriver` Class**: This class
+  should only contain the `main` method:
+  
+  * `main(String[] args)`: This method should only do the following:
+    
+    1. Interpret `args[1]` as `config`, a string that specifies the 
+       path to some file that provides a starting configuration.
+    2. Create a `LatinSquaresGame` object by passing `config` into
+       the constructor.
+    3. Invoke the `run` method on the `LatinSquaresGame` object.
+    
+    For the purposes of this assignment, you may safely assume that
+    valid input will be provided for the driver's command line
+    arguments.
+
+* **(60 points) Test Cases**:
 
 ### Non-Functional Requirements
 
 A non-functional requirement is *subtracted* from your point total if
 not satisfied.
 
-* **(100 points)** This project must be implemented in Java 8, 
+* **Environment (100 points):** This project must be implemented in Java 8, 
   and it must compile and run correctly on Nike using the specific
   version of Java 8 that is setup according to the instructions
   provided in the first homework assignment.
   
-* **(100 points)** Only one `Scanner` object for `System.in` (i.e., for
-  standard input) should be created. You are free to make `Scanner` 
-  objects for other inputs as needed.
+* **One Scanner for Standard Input (100 points):** Only one `Scanner` 
+  object for `System.in` (i.e., for standard input) should be created. 
+  You are free to make `Scanner` objects for other inputs as needed.
   
-* **(100 points)** Use of static variables is not allowed for this
-  assignment.
+* **No Static Variables (100 points):** Use of static variables is 
+  not allowed for this assignment.
+  
+* **Javadoc Documentation (20 points):** Each method and class needs to be documented
+  using Javadoc comments. If a method overrides an inheritted method that is
+  already documented, then that method only needs a Javadoc comment if the
+  implementation differs from the existing documentation. In such cases, the use of
+  `@inheritDoc` is encouraged. 
+
+* **In-line Documentation (20 points):** Code blocks should be adequately documented
+  using in-line comments. This is especially necessary when a block of code
+  is not immediately understood by a reader (e.g., the grader).
 
 ## Suggestions
 

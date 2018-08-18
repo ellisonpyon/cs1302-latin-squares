@@ -48,7 +48,7 @@ a *latin square* is.
 Let *n* denote some non-negative integer. Suppose you have *n*-many 
 characters. Then, an *n-by-n* *latin square* is an arrangement of all the
 characters in an *n-by-n* grid such that no orthogonal (row or column) 
-contains the same character twice.
+contains the same character twice. 
 
 For example, consider *n = 2* and characters: `A`, `B`. There are two
 possible latin squares that can be made with this information:
@@ -61,6 +61,50 @@ B A
 ```
 B A
 A B
+```
+
+Here is another example. Consider *n = 3* and characters: `x`, `y`, `z`. 
+There are actually twelve possible latin squares that can be made with 
+this information, two of which are presented below:
+
+```
+x y z
+z x y
+y z x
+```
+
+```
+x y z
+y z x
+z x y
+```
+
+For good measure, here is one more example. Consider *n = 4* and 
+characters: `@`, `#`, `$`, `%`. There are 576 possible latin squares 
+that can be made with this information! Here are two them:
+
+
+
+Computer programs can store latin squares in memory in various
+different ways, but a two-dimensional array of characters is
+a common approach. The way that a latin square is stored should
+be irrespective of how it is displayed to users. For example, 
+each of the following outputs could use the exact same array
+as storage since you can format the output as the array is
+processed (i.e., while it is looped through):
+
+```
+  0 1 2
+0 x y z
+1 z x y
+2 y z x
+```
+
+```
+    0   1   2
+0 | x | y | z
+1 | y | z | x
+2 | z | x | y
 ```
 
 ### What is the Latin Squares Game?

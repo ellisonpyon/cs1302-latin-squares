@@ -175,6 +175,10 @@ for a Latin Square's game:
   of three tokens that provide the row, column, and character,
   respectively.
   
+For the purposes of this assignment, you may safely assume that a
+correctly formated file will be used to provide the game's 
+starting configuration.
+  
 To read the file, let us assume that we have the path to the file
 stored in a `String` variable called `config` and use the
 following classes:
@@ -196,7 +200,13 @@ try {
 } // try
 ```
 
+Information about the `try` and `catch` blocks is provided in 
+Ch. 10 of the LDC4 textbook (see syllabus).
+
 #### Welcome Banner
+
+When the game first starts, the following text should be displayed
+to standard output:
 
 ```
   _           _   _        _____
@@ -207,7 +217,18 @@ try {
  |______\__,_|\__|_|_| |_|_____/ \__, |\__,_|\__,_|_|  \___||___/
                           CSCI 1302 | | v2018.fa
                                     |_|
+n = 3 { x, y, z }
+k = 1
 ```
+where the text below the game title summarizes some of the
+information about the game's starting configuration. 
+
+#### Displaying the Square
+
+
+
+#### Prompting the User
+
 
 #### Game Loop
 
@@ -222,11 +243,14 @@ TODO
 
 ### Functional Requirements
 
+A functional requirement is *added* to your point total if satisfied.
+
 TODO
 
 ### Non-Functional Requirements
 
-TODO
+A non-functional requirement is *subtracted* from your point total if
+not satisfied.
 
 * **(100 points)** This project must be implemented in Java 8, 
   and it must compile and run correctly on Nike using the specific
@@ -236,6 +260,9 @@ TODO
 * **(100 points)** Only one `Scanner` object for `System.in` (i.e., for
   standard input) should be created. You are free to make `Scanner` 
   objects for other inputs as needed.
+  
+* **(100 points)** Use of static variables is not allowed for this
+  assignment.
 
 ## Suggestions
 

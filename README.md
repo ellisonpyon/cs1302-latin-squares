@@ -290,7 +290,9 @@ should display the following message, then re-prompt the user:
 ```
 error> invalid input!
 ```
-This is repeated until valid input is entered.
+This is repeated until valid input is entered. In addition to
+obviously invalid input (e.g., invalid location or character),
+the inclusion of extra tokens is also considered invalid input.
 
 Examples of complete game input/output are provided in the appendix 
 of this document.

@@ -233,6 +233,7 @@ to standard output:
                                     |_|
 n = 3 { x, y, z }
 k = 2
+
 ```
 where the text below the game title summarizes some of the
 information about the game's starting configuration. In the
@@ -241,6 +242,10 @@ game with characters `x`, `y`, and `z`. Also, two pre-determined
 locations are specified bt the starting configuration as well.
 The locations will be shown the first (and subsequent) times
 the square is displayed to the user.
+
+**NOTE:** The blank line after `k = 2` in the example above
+is intentional. You should include a blank line in that location
+in order to match expected output.
 
 #### Displaying the Square
 
@@ -251,6 +256,7 @@ be displayed to the user as follows:
 0 |   |   |
 1 | y |[z]|
 2 |   |   |[y]
+
 ```
 This example assumes the starting configuration that was
 provided as an example earlier in this document. Location
@@ -261,7 +267,11 @@ vertical bars in order to help with readability. In this
 particular examplem the user has placed a `y` in location 
 (1, 0), probably during their first move.
 
-Examples of complete game input/output are provided in the appendix 
+**NOTE:** The blank at the end of the example above
+is intentional. You should include a blank line in that location
+in order to match expected output.
+
+**NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.
 
 #### Prompting the User
@@ -297,7 +307,7 @@ This is repeated until valid input is entered. In addition to
 obviously invalid input (e.g., invalid location or character),
 the inclusion of extra tokens is also considered invalid input.
 
-Examples of complete game input/output are provided in the appendix 
+**NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.
 
 #### Win Message
@@ -326,7 +336,7 @@ Take note that some of the characters in the text above
 may need to be escaped when stored in a string literal
 in Java.
 
-Examples of complete game input/output are provided in the appendix 
+**NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.
 
 #### Game Loop
@@ -340,7 +350,7 @@ to the following pseudocode:
   2. `DISPLAY GAME PROMPT`
 3. `DISPLAY WIN MESSAGE`
 
-Examples of complete game input/output are provided in the appendix 
+**NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.
 
 ## Project Requirements & Grading
@@ -349,18 +359,68 @@ of this document.
 
 A functional requirement is *added* to your point total if satisfied.
 
-* **(20 points) `cs1302.game.LatinSquaresGame` Class**:
+* **(35 points) `cs1302.game.LatinSquaresGame` Class**: Instances of
+  this class reperent a game of Latin Squares. You need to implement
+  all of the methods listed below. Unless stated otherwise, each
+  method is assumed to have public visibility.
+  
+  * **(5 points) `LatinSquares(String config)`**: In this constructor, 
+    you should read the contents of the file whose path is stored in `config`
+    and initialize variables, as needed, to setup the game according
+    to the starting configuration specified by the file.
+  
+  * **(5 points) `void printWelcome()`:** This method should print
+    the welcome banner to standard output, as described earler in
+    this document. 
+  
+  * **(5 points) `void displaySquare()`:** This method should print
+    the current contents of the square to standard output, as
+    described earlier in this document.
+    
+  * **(5 points) `void promptUser()`:** This method should print
+    the game prompt to standard output and interpret user input
+    from standard input, as described earlier in this document.
+    Instead of writing the code to check the square in this method,
+    you should call the `isLatinSquare` method described in these
+    requirements instead. 
+    
+  * **(5 points) `boolean isLatinSquare()`:** This method should 
+    return `true` if, and only if, all locations in the square are
+    filled and the square is a latin square, as defined earlier in
+    this document.
+    
+  * **(5 points) `void printWin()`:** This method should print
+    the win message to standard output, as described earler in
+    this document.
+    
+  * **(5 points) `void play()`:** This method should provide the
+    main game loop by invoking other instance methods, as needed.
+  
+  You will need to create instance variables (i.e., non-static 
+  variables of the class) in order to maintain the state information
+  of the game. All of these instance variables should be declared near
+  the top of the class body (but not initialized there) and
+  initialized in the class's constructor.
+  
+  **NOTE:** You should make the reference variable for standard input
+  `Scanner` object a instance variable. This will help you stay in
+  compliance with one of the non-functional requirements for this
+  project. 
+  
+  **NOTE:** You are not only free but encouraged to implement other methods, 
+  as needed, to help with readability, code reuse, etc.  
 
-* **(20 points) `cs1302.game.LatinSquaresDriver` Class**: This class
+* **(5 points) `cs1302.game.LatinSquaresDriver` Class**: This class
   should only contain the `main` method:
   
-  * `main(String[] args)`: This method should only do the following:
+  * `void main(String[] args)`: This public, static method should only 
+    do the following:
     
     1. Interpret `args[1]` as `config`, a string that specifies the 
        path to some file that provides a starting configuration.
     2. Create a `LatinSquaresGame` object by passing `config` into
        the constructor.
-    3. Invoke the `run` method on the `LatinSquaresGame` object.
+    3. Invoke the `play` method on the `LatinSquaresGame` object.
     
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
@@ -384,6 +444,8 @@ not satisfied.
   
 * **No Static Variables (100 points):** Use of static variables is 
   not allowed for this assignment.
+  
+* **Style Guidelines (20 points):**
   
 * **Javadoc Documentation (20 points):** Each method and class needs to be documented
   using Javadoc comments. If a method overrides an inheritted method that is

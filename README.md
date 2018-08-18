@@ -83,7 +83,19 @@ For good measure, here is one more example. Consider *n = 4* and
 characters: `@`, `#`, `$`, `%`. There are 576 possible latin squares 
 that can be made with this information! Here are two them:
 
+```
+@ # $ %
+# @ % $
+$ % @ #
+% $ # @
+```
 
+```
+@ # $ %
+$ % @ #
+# @ % $
+% $ # @
+```
 
 Computer programs can store latin squares in memory in various
 different ways, but a two-dimensional array of characters is

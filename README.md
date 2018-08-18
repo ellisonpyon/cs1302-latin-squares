@@ -40,8 +40,9 @@ the material included in this document should hopefully answer the majority
 of your questions.
 
 Your goal is to develop an interactive, text-based version of a game called 
-**Latin Squares**. Before we describe the game, let us first discuss what
-a *latin square* is.
+**Latin Squares**, which is based on a mathematical concept of the same name.
+The next two subsections describe the general mathematical concept and the
+game that is based on it, respectively.
 
 ### What is a Latin Square?
 
@@ -102,8 +103,10 @@ different ways, but a two-dimensional array of characters is
 a common approach. The way that a latin square is stored should
 be irrespective of how it is displayed to users. For example, 
 each of the following outputs could use the exact same array
-as storage since you can format the output as the array is
-processed (i.e., while it is looped through):
+as storage since the formatting for the index values and 
+surrounding characters can be printed as the contents of
+the array are processed (i.e., while the array is looped 
+through):
 
 ```
   0 1 2
@@ -121,11 +124,78 @@ processed (i.e., while it is looped through):
 
 ### What is the Latin Squares Game?
 
+For the purposes of this assignment, the **Latin Squares** game is 
+defined as an interactive, text-based game where users attempt to
+complete a latin square. In the next couple of paragraphs, we will
+discuss how the game is displayed to users as well as how users 
+interact with the game. Later sections provide more detail about
+requirements required to game's implementation. Although this is
+mentioned later in this document, it is important to note here: all
+game output should match the descriptions provided in this document
+as closely as possible. 
+
+If a user wishes to play a game of Latin Squares, they should be
+able to by typing in the following command at the shell prompt:
+```
+$ java -cp bin cs1302.game.LatinSquares config.txt 
+```
+where 
+
+* `-cp bin` denotes that the class path to the compiled version
+  of the game's default package is `bin`, 
+* `cs1302.game.LatinSquares` denotes the fully qualified name of
+  the game's driver class, and
+* `config.txt` is the path to a text file that provides the game's 
+  starting configuration. 
+  
+#### Starting Configuration
+
+The starting configuration for a game is provided in some readable
+text file adhering to a specific format, detailed below. For the
+purposes of defining the specification, we will first describe
+the file as containing *tokens* separated by *whitespace*. A token
+is simply a string of non-whitespace characrers, and whitespace
+is defined as a string of whitespace characters. A whitespace
+character is any character recognized by
+[`Character.isWhitespace`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-).
+If you use the 
+[`Scanner`](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
+class to parse the file, then tokens and whitespaces are handled
+as described here. 
+
+Here is the format for a file containing a starting configuration
+for a Latin Square's game:
+
+* The first token in the file represents *n*, the size of the game.
+* The next *n*-many tokens represent the characters for the game.
+* The next token represents *k*, the number of pre-determined locations
+  in the latin square grid.
+* The next *3k* tokens represent the placement and character for
+  each of the pre-determined lcoations. Each location is made up
+  of three tokens that provide the row, column, and character,
+  respectively.
+
+#### Welcome Banner
+
+```
+  _           _   _        _____
+ | |         | | (_)      / ____|
+ | |     __ _| |_ _ _ __ | (___   __ _ _   _  __ _ _ __ ___  ___
+ | |    / _` | __| | '_ \ \___ \ / _` | | | |/ _` | '__/ _ \/ __|
+ | |___| (_| | |_| | | | |____) | (_| | |_| | (_| | | |  __/\__ \
+ |______\__,_|\__|_|_| |_|_____/ \__, |\__,_|\__,_|_|  \___||___/
+                          CSCI 1302 | | v2018.fa
+                                    |_|
+```
+
+#### Game Loop
+
+#### Winning Conditions
+
+When the game first starts, the following banner 
+
 TODO
 
-This project must be implemented in Java 8, and it must compile and run 
-correctly on Nike using instructions that you will provide in an
-<code>INSTRUCTIONS.md</code> file (more on that later).
 
 ## Project Requirements & Grading
 
@@ -136,6 +206,11 @@ TODO
 ### Non-Functional Requirements
 
 TODO
+
+* **(100 points)** This project must be implemented in Java 8, 
+  and it must compile and run correctly on Nike using the specific
+  version of Java 8 that is setup according to the instructions
+  provided in the first homework assignment.
 
 ## Suggestions
 

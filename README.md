@@ -174,6 +174,27 @@ for a Latin Square's game:
   each of the pre-determined lcoations. Each location is made up
   of three tokens that provide the row, column, and character,
   respectively.
+  
+To read the file, let us assume that we have the path to the file
+stored in a `String` variable called `config` and use the
+following classes:
+
+* [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) 
+* [`Scanner`](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
+
+Most of you have used the `Scanner` class to read from standard input.
+Here, we will use it to read from a text file. This is accomplished using 
+something similar to the following code snippet:
+
+```java
+try {
+  File configFile = new File(config);
+  Scanner configScanner = new Scanner(configFile);
+  // use scanner here as usual
+} catch (Exception e) {
+  // handler exception here
+} // try
+```
 
 #### Welcome Banner
 
@@ -211,6 +232,10 @@ TODO
   and it must compile and run correctly on Nike using the specific
   version of Java 8 that is setup according to the instructions
   provided in the first homework assignment.
+  
+* **(100 points)** Only one `Scanner` object for `System.in` (i.e., for
+  standard input) should be created. You are free to make `Scanner` 
+  objects for other inputs as needed.
 
 ## Suggestions
 

@@ -175,6 +175,20 @@ for a Latin Square's game:
   of three tokens that provide the row, column, and character,
   respectively.
   
+Here is an example of the same starting configuration saved in
+two different ways:
+
+```
+3
+x y z
+1 1 z
+2 2 y
+```
+
+```
+3 x y z 1 1 z 2 2 y
+```
+  
 For the purposes of this assignment, you may safely assume that a
 correctly formated file will be used to provide the game's 
 starting configuration.
@@ -218,26 +232,108 @@ to standard output:
                           CSCI 1302 | | v2018.fa
                                     |_|
 n = 3 { x, y, z }
-k = 1
+k = 2
 ```
 where the text below the game title summarizes some of the
-information about the game's starting configuration. 
+information about the game's starting configuration. In the
+example above, the starting configuration specified a *3-by-3*
+game with characters `x`, `y`, and `z`. Also, two pre-determined
+locations are specified bt the starting configuration as well.
+The locations will be shown the first (and subsequent) times
+the square is displayed to the user.
 
 #### Displaying the Square
 
-
+Irrespective of how a square's contents are stored, it should
+be displayed to the user as follows:
+```
+    0   1   2
+0 |   |   |
+1 | y |[z]|
+2 |   |   |[y]
+```
+This example assumes the starting configuration that was
+provided as an example earlier in this document. Location
+that are surrounded with square brackets denote pre-determined
+location. The numbers along the top and left sides denote
+location indices. Locations are separated column-wise using
+vertical bars in order to help with readability. In this 
+particular examplem the user has placed a `y` in location 
+(1, 0), probably during their first move.
 
 #### Prompting the User
 
+Your game will display a prompt to the user at which the
+user will type in their input. The prompt should look this:
+```
+latin-squares> 
+```
+where there is a single space after the `>`. When the user
+types in their input, it should appear on the same line
+as the prompt. 
+
+For this game, there are only two valid commands:
+
+1. `latin-squares> q` <br>
+   This should quit the game immediately using `System.exit(0)`.
+   
+2. `latin-squares> row col char` <br>
+   This should update the specified location to be the specified
+   character. Users are allowed to repeately specifiy the same
+   location. However, users are not allowed to specify any of the
+   pre-determined locations specified by the game's starting
+   configuration. 
+
+If valid input is entered by the user, then the game should proceed
+as normal. If invalid input is entered by the user, then the game
+should display the following message, then re-prompt the user:
+```
+error> invalid input!
+```
+This is repeated until valid input is entered.
+
+Examples of complete game input/output are provided in the appendix 
+of this document.
+
+#### Win Message
+
+Every time the contents of the square is updated, the game
+should check to see if it is a latin square. If so, then
+the game is over and the following text should be displayed:
+```
+                                 .''.
+       .''.             *''*    :_\/_:     . 
+      :_\/_:   .    .:.*_\/_*   : /\ :  .'.:.'.
+  .''.: /\ : _\(/_  ':'* /\ *  : '..'.  -=:o:=-
+ :_\/_:'.:::. /)\*''*  .|.* '.\'/.'_\(/_'.':'.'
+ : /\ : :::::  '*_\/_* | |  -= o =- /)\    '  *
+  '..'  ':::'   * /\ * |'|  .'/.\'.  '._____
+      *        __*..* |  |     :      |.   |' .---"|
+       _*   .-'   '-. |  |     .--'|  ||   | _|    |
+    .-'|  _.|  |    ||   '-__  |   |  |    ||      |
+    |' | |.    |    ||       | |   |  |    ||      |
+ ___|  '-'     '    ""       '-'   '-.'    '`      |____
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    CONGRATULATIONS! YOU COMPLETED THE LATIN SQUARE!
+```
+
+Take note that some of the characters in the text above
+may need to be escaped when stored in a string literal
+in Java.
 
 #### Game Loop
 
-#### Winning Conditions
+From the user's perspective, the game should progress according
+to the following pseudocode:
 
-When the game first starts, the following banner 
+1. `WELCOME BANNER`
+2. `LOOP UNTIL GAME OVER:`
+  1. `DISPLAY SQUARE`
+  2. `DISPLAY GAME PROMPT`
+3. `DISPLAY WIN MESSAGE`
 
-TODO
-
+Examples of complete game input/output are provided in the appendix 
+of this document.
 
 ## Project Requirements & Grading
 

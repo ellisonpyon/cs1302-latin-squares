@@ -476,7 +476,7 @@ The actual functionality is tested using test cases.
 * **(60 points) Test Cases**: The bulk of this project will be graded
   based on 30 test cases, each worth 2 points. A single test case can 
   be described by three things: i) some starting configuration; ii) a 
-  sequence of user input; and iii) the program out given (i) and (ii).
+  sequence of user input; and iii) the program output given (i) and (ii).
   A few of these test cases are provided with the project.
   
   When a regular user plays the game, they specify a file with the

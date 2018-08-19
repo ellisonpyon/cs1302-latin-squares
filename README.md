@@ -30,6 +30,7 @@ at the University of Georgia.
 * [Suggestions](#suggestions)
 * [How to Download the Project](#how-to-download-the-project)
 * [Submission Instructions](#submission-instructions)
+* [Appendix - Example Games](#appendix---example-games)
 
 ## Academic Honesty
 
@@ -502,10 +503,13 @@ The actual functionality is tested using test cases.
   calls to your program's `Scanner` object for `System.in` return immediately
   with a token from the file. Once the program has stopped producing output,
   the grader then compares that output to a file containing the expected
-  output for that test case.
+  output for that test case (e.g., `tc01.out.txt`).
   
   You can test your program manually or using a similar automating procedure
-  as described above. All of the examples in the appendix 
+  as described above. All of the examples provided in the 
+  [Appendix](#appendix---example-games) are test cases. Their associated
+  test case files are located in the `tests` directory provided with
+  this project. 
 
 ### Non-Functional Requirements
 
@@ -731,7 +735,16 @@ post to "Instructors" as soon as possible.
 
 ## Appendix - Example Games
 
-Below are some 
+All of the examples provided in this appendix are also test cases. Their associated
+test case files are located in the `tests` directory provided with this project.
+Please read the [Functional Requirements](#functional-requirements) section for
+information on how to automate the running of test cases. 
+
+### Test Case 01 (`tc01`)
+
+### Test Case 03 (`tc02`)
+
+### Test Case 03 (`tc03`)
 
 <hr/>
 

@@ -742,9 +742,42 @@ information on how to automate the running of test cases.
 
 ### Test Case 01 (`tc01`)
 
+This test case creates a *2-by-2* game with no pre-determined locations, then
+has the user immediately quit.
+
+* Starting Configuration: [`tc01.config.txt`](tests/tc01.config.txt)
+* User Input: [`tc01.in.txt`](tests/tc01.in.txt)
+* Expected Output: [`tc01.out.txt`](tests/tc01.out.txt)
+
+```
+$ java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt < tc01.in.txt
+```
+
 ### Test Case 03 (`tc02`)
 
+This test case creates a *2-by-2* game with two pre-determined locations, then
+has the user immediately quit.
+
+* Starting Configuration: [`tc02.config.txt`](tests/tc02.config.txt)
+* User Input: [`tc02.in.txt`](tests/tc02.in.txt)
+* Expected Output: [`tc02.out.txt`](tests/tc02.out.txt)
+
+```
+$ java -cp bin cs1302.game.LatinSquaresDriver tc02.config.txt < tc02.in.txt
+```
+
 ### Test Case 03 (`tc03`)
+
+This test case creates a *2-by-2* game with two pre-determined locations, then
+has the user complete the latin square.
+
+* Starting Configuration: [`tc03.config.txt`](tests/tc03.config.txt)
+* User Input: [`tc03.in.txt`](tests/tc03.in.txt)
+* Expected Output: [`tc03.out.txt`](tests/tc03.out.txt)
+
+```
+$ java -cp bin cs1302.game.LatinSquaresDriver tc03.config.txt < tc03.in.txt
+```
 
 <hr/>
 

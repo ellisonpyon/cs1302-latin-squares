@@ -417,7 +417,7 @@ The actual functionality is tested using test cases.
   all of the methods listed below. Unless stated otherwise, each
   method is assumed to have public visibility.
   
-  * **(5 points) `LatinSquares(String config)`**: In this constructor, 
+  * **(5 points) `LatinSquaresGame(String config)`**: In this constructor, 
     you should read the contents of the file whose path is stored in `config`
     and initialize variables, as needed, to setup the game according
     to the starting configuration specified by the file.

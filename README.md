@@ -139,9 +139,9 @@ through):
 
 ```
     0   1   2
-0 | x | y | z
-1 | y | z | x
-2 | z | x | y
+0 | x | y | z |
+1 | y | z | x |
+2 | z | x | y |
 ```
 
 Another common approach for storing latin squares in memory
@@ -300,9 +300,9 @@ Irrespective of how a square's contents are stored, it should
 be displayed to the user as follows:
 ```
     0   1   2
-0 |   |   |
-1 | y |[z]|
-2 |   |   |[y]
+0 |   |   |   |
+1 | y |[z]|   |
+2 |   |   |[y]|
 
 ```
 This example assumes the starting configuration that was
@@ -750,7 +750,7 @@ has the user immediately quit.
 * Expected Output: [`tc01.out.txt`](tests/tc01.out.txt)
 
 ```
-$ java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt < tc01.in.txt
+$ java -cp bin cs1302.game.LatinSquaresDriver tests/tc01.config.txt < tests/tc01.in.txt
 ```
 
 ### Test Case 03 (`tc02`)
@@ -763,7 +763,7 @@ has the user immediately quit.
 * Expected Output: [`tc02.out.txt`](tests/tc02.out.txt)
 
 ```
-$ java -cp bin cs1302.game.LatinSquaresDriver tc02.config.txt < tc02.in.txt
+$ java -cp bin cs1302.game.LatinSquaresDriver tests/tc02.config.txt < tests/tc02.in.txt
 ```
 
 ### Test Case 03 (`tc03`)
@@ -776,7 +776,7 @@ has the user complete the latin square.
 * Expected Output: [`tc03.out.txt`](tests/tc03.out.txt)
 
 ```
-$ java -cp bin cs1302.game.LatinSquaresDriver tc03.config.txt < tc03.in.txt
+$ java -cp bin cs1302.game.LatinSquaresDriver tests/tc03.config.txt < tests/tc03.in.txt
 ```
 
 <hr/>

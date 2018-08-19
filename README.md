@@ -10,10 +10,31 @@ at the University of Georgia.
 
 **Seriously. Read this entire file *before* starting.**
 
+## Table of Contents
+
+* [Academic Honesty](#academic-honesty)
+* [Updates](#updates)
+* [Project Description](#project-description)
+  * [What is a Latin Square?](#what-is-a-latin-square)
+  * [What is the Latin Squares Game?](#what-is-the-latin-squares-game)
+    * [Starting Configuration](#starting-configuration)
+    * [Welcome Banner](#welcome-banner)
+    * [Displaying the Square](#displaying-the-square)
+    * [Prompting the User](#prompting-the-user)
+    * [Win Message](#win-message)
+    * [Game Loop](#game-loop)
+* [Project Requirements & Grading](#project-requirements--grading)
+  * [Functional Requirements](#functional-requirements)
+  * [Non-Functional Requirements](#non-functional-requirements)
+  * [Extra Credit Requirements](#extra-credit-requirements)
+* [Suggestions](#suggestions)
+* [How to Download the Project](#how-to-download-the-project)
+* [Submission Instructions](#submission-instructions)
+
 ## Academic Honesty
 
-You agree to the Academic Honesty policy as outlined in the course syllabus and
-course website. In accordance with this notice, I must caution you **not** to 
+You agree to the Academic Honesty policy as outlined in the course syllabus. 
+In accordance with this notice, I must caution you **not** to 
 fork this repository on GitHub if you have an account. Doing so will more than
 likely make your copy of the project publicly visible. Please follow the 
 instructions contained in the "How to Download the Project" section below in 
@@ -371,8 +392,8 @@ to the following pseudocode:
 
 1. `WELCOME BANNER`
 2. `LOOP UNTIL GAME OVER:`
-  1. `DISPLAY SQUARE`
-  2. `DISPLAY GAME PROMPT`
+   1. `DISPLAY SQUARE`
+   2. `DISPLAY GAME PROMPT`
 3. `DISPLAY WIN MESSAGE`
 
 **NOTE:** Examples of complete game input/output are provided in the appendix 
@@ -426,7 +447,8 @@ The actual functionality is tested using test cases.
   * **(5 points) `void play()`:** This method should provide the
     main game loop by invoking other instance methods, as needed.
   
-  
+  **NOTE:** Please see the [Suggestions](#suggestions) section of this
+  document before writing the code to implement these methods.
   
   **NOTE:** You are not only free but encouraged to implement other methods, 
   as needed, to help with readability, code reuse, etc.  
@@ -450,7 +472,7 @@ The actual functionality is tested using test cases.
     Additional code may be required if you are attempting one of the
     extra credit requirements listed later in this document. 
 
-* **(60 points) Test Cases**:
+* **(60 points) Test Cases**: Your 
 
 ### Non-Functional Requirements
 
@@ -459,10 +481,28 @@ not satisfied. In order to emphasize the importance of these requirements,
 non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing. 
 
-* **(100 points) Environment:** This project must be implemented in Java 8, 
-  and it must compile and run correctly on Nike using the specific
-  version of Java 8 that is setup according to the instructions
-  provided in the first homework assignment.
+* **(100 points) Project Directory Structure:** The location of the default
+  package for the source code should be a direct subdirectory called `src`.
+  When the project is compiled, the `-d` option should be used with `javac`
+  to make the default package for compiled code a direct subdirectory
+  called `bin`. 
+  
+  If you follow this structure, then you might type the following to compile 
+  your code, assuming you are in the top-level project directory:
+  ```
+  $ javac -cp src -d bin src/cs1302/game/LatinSquaresGame.java
+  $ javac -cp src -d bin src/cs1302/game/LatinSquaresDriver.java
+  ```
+  Or, you might accomplish the same thing with a single command similar to 
+  this:
+  ```
+  $ javac -cp src -d bin src/cs1302/game/*.java
+  ```
+
+* **(100 points) Development Environment:** This project must be implemented 
+  in Java 8, and it *must compile and run* correctly on Nike using the specific
+  version of Java 8 that is setup according to the instructions provided
+  by your instructor (usually provided in the first homework assignment).
   
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner` 
   object for `System.in` (i.e., for standard input) should be created. 
@@ -616,7 +656,10 @@ $ git clone https://github.com/cs1302uga/cs1302-latin-squares.git
 ```
 
 This should create a directory called <code>cs1302-latin-squares</code> in
-your present working directory that contains the project files.
+your present working directory that contains the project files. For this
+project, the only files that are included with the project download
+are listed near the top of the page 
+[here](https://github.com/cs1302uga/cs1302-latin-squares).
 
 If any updates to the project files are announced by your instructor, you can
 merge those changes into your copy by changing into your project's directory

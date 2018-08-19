@@ -38,9 +38,10 @@ You agree to the Academic Honesty policy as outlined in the course syllabus.
 In accordance with this notice, I must caution you **not** to 
 fork this repository on GitHub if you have an account. Doing so will more than
 likely make your copy of the project publicly visible. Please follow the 
-instructions contained in the "How to Download the Project" section below in 
-order to do your development on nike. Furthermore, you must adhere to the 
-copyright notice and licensing information at the bottom of this document.
+instructions contained in the 
+[How to Download the Project](#how-to-download-the-project)
+section below in order to do your development on nike. Furthermore, you must adhere
+ to the copyright notice and licensing information at the bottom of this document.
 
 ## Updates
 

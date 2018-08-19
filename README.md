@@ -46,7 +46,7 @@ game that is based on it, respectively.
 
 ### What is a Latin Square?
 
-Let *n* denote some non-negative integer. Suppose you have *n*-many 
+Let *n* denote some positive integer (i.e., *n* > 0). Suppose you have *n*-many 
 characters. Then, an *n-by-n* *latin square* is an arrangement of all the
 characters in an *n-by-n* grid such that no orthogonal (row or column) 
 contains the same character twice. 
@@ -122,6 +122,30 @@ through):
 2 | z | x | y
 ```
 
+Another common approach for storing latin squares in memory
+is using one one-dimensional array of characters for the characters 
+and one two-dimensional array of integers for the square. 
+For example, the same latin square in the last example might 
+be stored using the following two arrays:
+
+```
+x y z
+```
+
+```
+0 1 2
+2 0 1
+1 2 0
+```
+
+The second approach requires slightly more memory, but it likely
+simplifies many algorithms the programmer might write for checking
+whether or not the square is a latin square. 
+
+It is very likely that some of you have seen a variation of the
+latin square where the characters for an *n-by-n* square are
+`1`, `2`, ..., `n`. This variation is often called *sudoku*. 
+
 ### What is the Latin Squares Game?
 
 For the purposes of this assignment, the **Latin Squares** game is 
@@ -135,7 +159,8 @@ game output should match the descriptions provided in this document
 as closely as possible. 
 
 If a user wishes to play a game of Latin Squares, they should be
-able to by typing in the following command at the shell prompt:
+able to by typing something like the following command at the 
+shell prompt:
 ```
 $ java -cp bin cs1302.game.LatinSquaresDriver config.txt 
 ```
@@ -239,7 +264,7 @@ where the text below the game title summarizes some of the
 information about the game's starting configuration. In the
 example above, the starting configuration specified a *3-by-3*
 game with characters `x`, `y`, and `z`. Also, two pre-determined
-locations are specified bt the starting configuration as well.
+locations are specified by the starting configuration as well.
 The locations will be shown the first (and subsequent) times
 the square is displayed to the user.
 
@@ -355,9 +380,14 @@ of this document.
 
 ## Project Requirements & Grading
 
+This assignment is made up of 100 points total. 
+
 ### Functional Requirements
 
 A functional requirement is *added* to your point total if satisfied.
+There will be no partial credit for any of the requirements that simply 
+require the presence of a method related a particular functionality. 
+The actual functionality is tested using test cases.
 
 * **(35 points) `cs1302.game.LatinSquaresGame` Class**: Instances of
   this class reperent a game of Latin Squares. You need to implement
@@ -396,16 +426,7 @@ A functional requirement is *added* to your point total if satisfied.
   * **(5 points) `void play()`:** This method should provide the
     main game loop by invoking other instance methods, as needed.
   
-  You will need to create instance variables (i.e., non-static 
-  variables of the class) in order to maintain the state information
-  of the game. All of these instance variables should be declared near
-  the top of the class body (but not initialized there) and
-  initialized in the class's constructor.
   
-  **NOTE:** You should make the reference variable for standard input
-  `Scanner` object a instance variable. This will help you stay in
-  compliance with one of the non-functional requirements for this
-  project. 
   
   **NOTE:** You are not only free but encouraged to implement other methods, 
   as needed, to help with readability, code reuse, etc.  
@@ -413,8 +434,8 @@ A functional requirement is *added* to your point total if satisfied.
 * **(5 points) `cs1302.game.LatinSquaresDriver` Class**: This class
   should only contain the `main` method:
   
-  * `void main(String[] args)`: This public, static method should only 
-    do the following:
+  * `void main(String[] args)`: This public, static method should 
+    do the following :
     
     1. Interpret `args[1]` as `config`, a string that specifies the 
        path to some file that provides a starting configuration.
@@ -425,41 +446,165 @@ A functional requirement is *added* to your point total if satisfied.
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
     arguments.
+    
+    Additional code may be required if you are attempting one of the
+    extra credit requirements listed later in this document. 
 
 * **(60 points) Test Cases**:
 
 ### Non-Functional Requirements
 
 A non-functional requirement is *subtracted* from your point total if
-not satisfied.
+not satisfied. In order to emphasize the importance of these requirements,
+non-compliance results in the full point amount being subtracted from your
+point total. That is, they are all or nothing. 
 
-* **Environment (100 points):** This project must be implemented in Java 8, 
+* **(100 points) Environment:** This project must be implemented in Java 8, 
   and it must compile and run correctly on Nike using the specific
   version of Java 8 that is setup according to the instructions
   provided in the first homework assignment.
   
-* **One Scanner for Standard Input (100 points):** Only one `Scanner` 
+* **(100 points) One Scanner for Standard Input:** Only one `Scanner` 
   object for `System.in` (i.e., for standard input) should be created. 
   You are free to make `Scanner` objects for other inputs as needed.
   
-* **No Static Variables (100 points):** Use of static variables is 
+* **(100 points) No Static Variables:** Use of static variables is 
   not allowed for this assignment.
   
-* **Style Guidelines (20 points):**
+* **(25 points) Code Style Guidelines:** You should be consistent with the style 
+  aspect of your code in order to promote readability. Besides consistency, the
+  following conventions will be enforced:
   
-* **Javadoc Documentation (20 points):** Each method and class needs to be documented
-  using Javadoc comments. If a method overrides an inheritted method that is
-  already documented, then that method only needs a Javadoc comment if the
-  implementation differs from the existing documentation. In such cases, the use of
-  `@inheritDoc` is encouraged. 
+  * **Reference type names are written in _UpperCamelCase_.** Class names are  
+    typically nouns or noun phrases. For example, `Character` or `ImmutableList`. 
+    Interface names may also be nouns or noun phrases (for example, `List`), but 
+    may sometimes be adjectives or adjective phrases instead (for example, 
+    `Readable`).
+  
+  * **Method names are written in _lowerCamelCase_.** Method names are also 
+    typically verbs or verb phrases. For example, `sendMessage` or `stop`.
+  
+  * **Braces are always used where optional.** Braces should be used with `if`, 
+    `else`, `for`, `do`, and `while` statements, even when the body is empty or 
+    contains only a single statement.
+    
+  * **Column limit: 100.** You should limit the number of characters, including
+    whitespace, on any given line to 100 characters. Except as noted below, any 
+    line that would exceed this limit must be manually line-wrapped in a
+    consistent manner. Exceptions to the column limit include:
+    
+    * Lines where obeying the column limit is not possible (for example, a long 
+      URL in Javadoc, or a long JSNI method reference).
+    * In `package` and `import` statements.
+    * Command line input examples in a comment that may be cut-and-pasted into 
+      a shell.
+      
+  * **Method height <= window height.** You should limit the number of lines for
+    a method so that the entire method can be seen on the screen at once. This
+    includes the line(s) with the method's signature and opening curly brace, all
+    lines in the body of the mthod (including blank lines), and the line with
+    the method's ending curly brace. 
+    
+    Of all the style guidelines, this is the probably the most subjective and 
+    hardest to grade because everyone might have a different window size due
+    to different terminal emulator and physical screen size configurations. 
+    Therefore, graders will be checking for compliance with the spirit
+    of this guideline, which is: methods that are too big and/or repetitive 
+    should be refactored to include propor looping constructs and/or broken
+    up into smaller methods to improve readability. 
 
-* **In-line Documentation (20 points):** Code blocks should be adequately documented
+* **Javadoc Documentation (25 points):** Each method and class needs to be documented
+  using Javadoc comments. At the very least, your comment should provide a description
+  of the method's functionality in the first sentence of the comment. This sentence
+  needs to be a gramatically correct English sentence with propor punctuation. Further 
+  description can be provided in subsequent sentence. The basic formatting of Javadoc 
+  blocks is as seen in this example:
+  ```java
+  /**
+   * Multiple lines of Javadoc text are written here,
+   * wrapped normally...
+   */
+  public int method(String p1) { ... }
+  ```
+  ... or in this single-line example:
+  ```java
+  /** An especially short bit of Javadoc. */
+  ```
+  The basic form is always acceptable. The single-line form may be substituted when 
+  the entirety of the Javadoc block (including comment markers) can fit on a single
+  line. More information about Javadoc can be found
+  [here](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/javadoc.html).
+  You are free to provide more information in in your Javadoc comments (e.g., such
+  parameter and return value documentation) as long as they are done using 
+  proper Javadoc syntax. We will cover Javadoc comments in much more detail in a 
+  later assignment.
+
+* **In-line Documentation (0 points):** Code blocks should be adequately documented
   using in-line comments. This is especially necessary when a block of code
-  is not immediately understood by a reader (e.g., the grader).
+  is not immediately understood by a reader (e.g., the grader). While this particular
+  item is not technically required, it is still listed here because it is
+  highly encouraged. 
 
+### Extra Credit Requirements
+
+An extra credit requirement is an extra functional requirement that is *added* 
+to your point total if satisfied. If you want the graders to check for any 
+extra credit requirements, then you must include an extra text file with your 
+submission called `EXTRA.md`. In that file, you need to provide a brief 
+description of each extra credit that should be checked.
+
+* **Config Generator (5 points):** Allow users to generate config files that
+  specifiy random, valid starting configurations by specifying a `--gen` 
+  option to the driver class. Here is a synopsis that should be followed:
+  ```
+  $ java -cp bin cs1302.game.LatinSquaresDriver -gen file n k c1 c2 c3 ...
+  ```
+  where 
+
+  * `-cp bin` denotes that the class path to the compiled version
+    of the game's default package is `bin`, 
+  * `cs1302.game.LatinSquaresDriver` denotes the fully qualified name of
+    the game's driver class,
+  * `file` is the path to a text file to which the starting configuration
+    will be written,
+  * `n` denotes the size of the square,
+  * `k` denotes the number of pre-determined locations to generate, and
+  * `c1 c2 c3 ...` denote the *n*-many characters that will be used.
+  
+  Use of the
+  [`PrintWriter`](https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html)
+  class is reccommended. You are likely familiar with printing to standard
+  output via `System.out`. The `PrintWriter` class allows you to create an
+  object for arbitrary file output with the same interface that you are used
+  to (i.e., it provides methods like `print`, `println`, etc.). 
+  
+  If this extra credit is mentioned in `EXTRA.md`, then it will be tested
+  according to five simple test cases in order to determine 
+  
 ## Suggestions
 
-TODO
+You should plan out your class before you begin to write it. While you already
+know a few things from the requirements that should be included in the class,
+there is a great deal more to actually consider. A class represents a kind of
+template or schematic for objects. This means that it needsto describe all of
+the things that an object would need in order to function properly. This
+includes both behavior, which is captured by methods, as well as state, which
+is captured by instance variables.
+
+You will need to create instance variables (i.e., non-static variables of the 
+class) in order to maintain the state information of your Latin Squares game. 
+All of these instance variables should be declared near the top of the class 
+body (but not initialized there) and initialized in the class's constructor.
+
+I encourage you to consider the different ways to store a latin square,
+which were described earlier in this document, when designing your class.
+Your choice will directly impact the work done in various methods throughout
+the class.
+
+**NOTE:** You should make the reference variable for standard input
+`Scanner` object a instance variable. This will help you stay in
+compliance with one of the non-functional requirements for this
+project. 
 
 ## How to Download the Project
 

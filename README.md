@@ -281,7 +281,6 @@ to standard output:
                                     |_|
 n = 3 { x, y, z }
 k = 2
-
 ```
 where the text below the game title summarizes some of the
 information about the game's starting configuration. In the
@@ -291,15 +290,12 @@ locations are specified by the starting configuration as well.
 The locations will be shown the first (and subsequent) times
 the square is displayed to the user.
 
-**NOTE:** The blank line after `k = 2` in the example above
-is intentional. You should include a blank line in that location
-in order to match expected output.
-
 #### Displaying the Square
 
 Irrespective of how a square's contents are stored, it should
 be displayed to the user as follows:
 ```
+
     0   1   2
 0 |   |   |   |
 1 | y |[z]|   |
@@ -307,17 +303,17 @@ be displayed to the user as follows:
 
 ```
 This example assumes the starting configuration that was
-provided as an example earlier in this document. Location
-that are surrounded with square brackets denote pre-determined
-location. The numbers along the top and left sides denote
-location indices. Locations are separated column-wise using
-vertical bars in order to help with readability. In this 
-particular examplem the user has placed a `y` in location 
-(1, 0), probably during their first move.
+provided as an example earlier in this document. Locations
+that are surrounded with square brackets are pre-determined.
+The numbers along the top and left sides are location indices. 
+Locations are separated column-wise using vertical bars in order
+to help with readability. In this  particular example, the user 
+has placed a `y` in location (1, 0), probably during their 
+first move.
 
-**NOTE:** The blank at the end of the example above
-is intentional. You should include a blank line in that location
-in order to match expected output.
+**NOTE:** The blank lines above and below the square in the example 
+above are intentional. You should include blank lines in those 
+locations in order to match expected output.
 
 **NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.
@@ -403,7 +399,8 @@ of this document.
 
 ## Project Requirements & Grading
 
-This assignment is made up of 100 points total. 
+This assignment is worth 100 points. The lowest possible grade is 0, and the 
+highest possible grade is 105 (due to extra credit).
 
 ### Functional Requirements
 
@@ -657,7 +654,7 @@ description of each extra credit that should be checked.
   to (i.e., it provides methods like `print`, `println`, etc.). 
   
   If this extra credit is mentioned in `EXTRA.md`, then it will be tested
-  according to five simple test cases in order to determine 
+  using five simple test cases. 
   
 ## Suggestions
 

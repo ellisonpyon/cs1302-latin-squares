@@ -616,11 +616,9 @@ point total. That is, they are all or nothing.
   proper Javadoc syntax. We will cover Javadoc comments in much more detail in a 
   later assignment.
 
-* **In-line Documentation (0 points):** Code blocks should be adequately documented
+* **In-line Documentation (25 points):** Code blocks should be adequately documented
   using in-line comments. This is especially necessary when a block of code
-  is not immediately understood by a reader (e.g., the grader). While this particular
-  item is not technically required, it is still listed here because it is
-  highly encouraged. 
+  is not immediately understood by a reader (e.g., yourself or the grader). 
 
 ### Extra Credit Requirements
 

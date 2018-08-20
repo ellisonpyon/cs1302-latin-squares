@@ -2,7 +2,9 @@
 
 ![Unrelated image from "The illustrated companion to the Latin dictionary and Greek lexicon"](https://i.imgur.com/XUnNC0D.jpg)
 
+<span style="padding: 1rem; background-color: #dc3545; color: white;">
 **DUE SUN 2018-09-02 (Sep 2) @ 11:55 PM**
+</span>
 
 This repository contains the skeleton code for the Latin Squares project
 assigned to the students in the Fall 2018 CSCI 1302 classes

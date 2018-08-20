@@ -1,5 +1,7 @@
 # CSCI 1302 - Latin Squares v2018.fa
 
+![Unrelated image from "The illustrated companion to the Latin dictionary and Greek lexicon"](https://i.imgur.com/XUnNC0D.jpg)
+
 **DUE SUN 2018-09-02 (Sep 2) @ 11:55 PM**
 
 This repository contains the skeleton code for the Latin Squares project

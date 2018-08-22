@@ -562,13 +562,13 @@ point total. That is, they are all or nothing.
   If you follow this structure, then you might type the following to compile 
   your code, assuming you are in the top-level project directory:
   ```
-  $ javac -cp src -d bin src/cs1302/game/LatinSquaresGame.java
-  $ javac -cp src -d bin src/cs1302/game/LatinSquaresDriver.java
+  $ javac -cp bin -d bin src/cs1302/game/LatinSquaresGame.java
+  $ javac -cp bin -d bin src/cs1302/game/LatinSquaresDriver.java
   ```
   Or, you might accomplish the same thing with a single command similar to 
   this:
   ```
-  $ javac -cp src -d bin src/cs1302/game/*.java
+  $ javac -cp bin -d bin src/cs1302/game/*.java
   ```
 
 * **(100 points) Development Environment:** This project must be implemented 

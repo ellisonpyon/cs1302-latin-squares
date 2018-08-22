@@ -231,12 +231,13 @@ two different ways:
 ```
 3
 x y z
+2
 1 1 z
 2 2 y
 ```
 
 ```
-3 x y z 1 1 z 2 2 y
+3 x y z 2 1 1 z 2 2 y
 ```
   
 For the purposes of this assignment, you may safely assume that a
@@ -592,8 +593,8 @@ point total. That is, they are all or nothing.
 
 * **Javadoc Documentation (25 points):** Each method and class needs to be documented
   using Javadoc comments. At the very least, your comment should provide a description
-  of the method's functionality in the first sentence of the comment. This sentence
-  needs to be a gramatically correct English sentence with propor punctuation. Further 
+  of the method's functionality in the first sentence of the comment.  This sentence
+  needs to be a gramatically correct English sentence with proper punctuation. Further 
   description can be provided in subsequent sentence. The basic formatting of Javadoc 
   blocks is as seen in this example:
   ```java

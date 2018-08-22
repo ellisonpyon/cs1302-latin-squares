@@ -189,7 +189,7 @@ If a user wishes to play a game of Latin Squares, they should be
 able to by typing something like the following command at the 
 shell prompt:
 ```
-$ java -cp bin cs1302.game.LatinSquaresDriver config.txt 
+$ java -cp bin cs1302.game.LatinSquaresDriver some/path/to/config.txt 
 ```
 where 
 
@@ -197,8 +197,8 @@ where
   of the game's default package is `bin`, 
 * `cs1302.game.LatinSquaresDriver` denotes the fully qualified name of
   the game's driver class, and
-* `config.txt` is the path to a text file that provides the game's 
-  starting configuration. 
+* `some/path/to/config.txt` is the path to a text file that provides 
+  the game's starting configuration. 
   
 #### Starting Configuration
 

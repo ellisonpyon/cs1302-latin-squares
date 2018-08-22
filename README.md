@@ -52,7 +52,8 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
 
-* **2018-08-22:** Fixed some small typos and clarified some things. 
+* **2018-08-22:** Fixed some small typos and clarified some things. Also
+  provided an example of how to display a square when *n > 10*.
 
 ## Project Description
 
@@ -327,6 +328,29 @@ the vertical bars). In this scenario, the 3 characters that make up
 the contents of a location should be aligned against the left vertical 
 bar. A clear exception to this is when *n = 1*, in which case we 
 assume that *p = 1*. 
+
+Here is an example when *n = 12* (which makes *p = 2*):
+```
+
+     0    1    2    3    4    5    6    7    8    9    10   11
+ 0 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 1 |    |[a] |    |    |    |    |    |    |    |    |    |    |  
+ 2 |    |    |[b] |    |    |    |    |    |    |    |    |    |
+ 3 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 4 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 5 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 6 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 7 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 8 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 9 |    |    |    |    |    |    |    |    |    |    |    |    |
+10 |    |    |    |    |    |    |    |    |    |    |    |    |
+11 |    |    |    |    |    |    |    |    |    |    |    |[k] |
+
+```
+The corresponding starting configuration for this might be:
+```
+12 a b c d e f g h i j k l 2 1 1 a 2 2 b 11 11 k
+```
 
 **NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.

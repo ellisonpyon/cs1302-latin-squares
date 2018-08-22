@@ -349,7 +349,7 @@ Here is an example when *n = 12* (which makes *p = 2*):
 ```
 The corresponding starting configuration for this might be:
 ```
-12 a b c d e f g h i j k l 2 1 1 a 2 2 b 11 11 k
+12 a b c d e f g h i j k l 3 1 1 a 2 2 b 11 11 k
 ```
 
 **NOTE:** Examples of complete game input/output are provided in the appendix 

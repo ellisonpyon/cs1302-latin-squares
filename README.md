@@ -52,6 +52,8 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
 
+* **2018-08-22:** Fixed some small typos and clarified some things. 
+
 ## Project Description
 
 This first project is meant to ensure that you are able to apply and extend
@@ -317,6 +319,14 @@ first move.
 **NOTE:** The blank lines above and below the square in the example 
 above are intentional. You should include blank lines in those 
 locations in order to match expected output.
+
+Let *p* denote the smallest integer such that *10<sup>p</sup> >= n*. 
+Then, each column displayed in the output when a square is displayed
+should take up *p+2* characters between each vertical bar (not including
+the vertical bars). In this scenario, the 3 characters that make up 
+the contents of a location should be aligned against the left vertical 
+bar. A clear exception to this is when *n = 1*, in which case we 
+assume that *p = 1*. 
 
 **NOTE:** Examples of complete game input/output are provided in the appendix 
 of this document.

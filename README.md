@@ -495,7 +495,7 @@ The actual functionality is tested using test cases.
   * `void main(String[] args)`: This public, static method should 
     do the following :
     
-    1. Interpret `args[1]` as `config`, a string that specifies the 
+    1. Interpret `args[0]` as `config`, a string that specifies the 
        path to some file that provides a starting configuration.
     2. Create a `LatinSquaresGame` object by passing `config` into
        the constructor.

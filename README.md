@@ -667,7 +667,7 @@ description of each extra credit that should be checked.
   specifiy random, valid starting configurations by specifying a `--gen` 
   option to the driver class. Here is a synopsis that should be followed:
   ```
-  $ java -cp bin cs1302.game.LatinSquaresDriver -gen file n k c1 c2 c3 ...
+  $ java -cp bin cs1302.game.LatinSquaresDriver --gen file n k c1 c2 c3 ...
   ```
   where 
 

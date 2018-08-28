@@ -447,7 +447,7 @@ require the presence of a method related a particular functionality.
 The actual functionality is tested using test cases.
 
 * **(35 points) `cs1302.game.LatinSquaresGame` Class**: Instances of
-  this class reperent a game of Latin Squares. You need to implement
+  this class represent a game of Latin Squares. You need to implement
   all of the methods listed below. Unless stated otherwise, each
   method is assumed to have public visibility.
   

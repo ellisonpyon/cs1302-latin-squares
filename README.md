@@ -273,8 +273,13 @@ try {
   File configFile = new File(config);
   Scanner configScanner = new Scanner(configFile);
   // use scanner here as usual
+} catch (FileNotFoundException fnfe) {
+  // handle exception here
+  System.err.println(fnfe);
 } catch (Exception e) {
-  // handler exception here
+  // handle some other exception here
+  // System.err.println(e);
+  // e.printStackTrace();
 } // try
 ```
 

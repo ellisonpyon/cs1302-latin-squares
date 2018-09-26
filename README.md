@@ -229,7 +229,7 @@ for a Latin Square's game:
   respectively.
   
 Here is an example of the same starting configuration saved in
-two different ways:
+three different ways:
 
 ```
 3
@@ -241,6 +241,16 @@ x y z
 
 ```
 3 x y z 2 1 1 z 2 2 y
+```
+
+```
+        3
+ x     y 
+z
+    2
+1                  1  z
+2 
+2 y
 ```
   
 For the purposes of this assignment, you may safely assume that a

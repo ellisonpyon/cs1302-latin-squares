@@ -228,7 +228,7 @@ for a Latin Square's game:
   of three tokens that provide the row, column, and character,
   respectively.
   
-Here is an example of the same starting configuration saved in
+Here is an example of the same starting configuration saved
 three different ways:
 
 ```

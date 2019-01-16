@@ -1,11 +1,11 @@
-# CSCI 1302 - Latin Squares v2018.fa
+# CSCI 1302 - Latin Squares v2019.sp
 
 ![Unrelated image from "The illustrated companion to the Latin dictionary and Greek lexicon"](https://i.imgur.com/XUnNC0D.jpg)
 
-**DUE SUN 2018-09-02 (Sep 2) @ 11:55 PM**
+**DUE FRI 2019-02-01 (Feb 1) @ 11:55 PM**
 
 This repository contains the skeleton code for the Latin Squares project
-assigned to the students in the Fall 2018 CSCI 1302 classes
+assigned to the students in the Spring 2019 CSCI 1302 classes
 at the University of Georgia. 
 
 **Please read the entirety of this file before beginning your project.**
@@ -51,9 +51,6 @@ Updates will be posted here.
 If there has been an update and you have already cloned the project to Nike, 
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
-
-* **2018-08-22:** Fixed some small typos and clarified some things. Also
-  provided an example of how to display a square when *n > 10*.
 
 ## Project Description
 
@@ -129,7 +126,7 @@ $ % @ #
 Computer programs can store latin squares in memory in various
 different ways, but a two-dimensional array of characters is
 a common approach. The way that a latin square is stored should
-be irrespective of how it is displayed to users. For example, 
+be independent of how it is displayed to users. For example, 
 each of the following outputs could use the exact same array
 as storage since the formatting for the index values and 
 surrounding characters can be printed as the contents of
@@ -172,7 +169,10 @@ whether or not the square is a latin square.
 
 It is very likely that some of you have seen a variation of the
 latin square where the characters for an *n-by-n* square are
-`1`, `2`, ..., `n`. This variation is often called *sudoku*. 
+`1`, `2`, ..., `n`. This variation is often called *sudoku*
+when `n` equals 9 and an additional requirement is imposed on 
+the contents of the individual 3-by-3 squares within the greater 
+square.
 
 ### What is the Latin Squares Game?
 
@@ -295,7 +295,7 @@ to standard output:
  | |    / _` | __| | '_ \ \___ \ / _` | | | |/ _` | '__/ _ \/ __|
  | |___| (_| | |_| | | | |____) | (_| | |_| | (_| | | |  __/\__ \
  |______\__,_|\__|_|_| |_|_____/ \__, |\__,_|\__,_|_|  \___||___/
-                          CSCI 1302 | | v2018.fa
+                          CSCI 1302 | | v2019.sp
                                     |_|
 n = 3 { x, y, z }
 k = 2
@@ -372,7 +372,7 @@ of this document.
 Your game will display a prompt to the user at which the
 user will type in their input. The prompt should look this:
 ```
-latin-squares> 
+latin-squares: 
 ```
 where there is a single space after the `>`. When the user
 types in their input, it should appear on the same line
@@ -380,10 +380,10 @@ as the prompt.
 
 For this game, there are only two valid commands:
 
-1. `latin-squares> q` <br>
+1. `latin-squares: q` <br>
    This should quit the game immediately using `System.exit(0)`.
    
-2. `latin-squares> row col char` <br>
+2. `latin-squares: row col char` <br>
    This should update the specified location to be the specified
    character. Users are allowed to repeately specifiy the same
    location. However, users are not allowed to specify any of the
@@ -394,7 +394,7 @@ If valid input is entered by the user, then the game should proceed
 as normal. If invalid input is entered by the user, then the game
 should display the following message, then re-prompt the user:
 ```
-error> invalid input!
+error: invalid input!
 ```
 This is repeated until valid input is entered. In addition to
 obviously invalid input (e.g., invalid location or character),
@@ -540,10 +540,13 @@ The actual functionality is tested using test cases.
   program's perspective, it stil thinks it's reading from standard input.
   It's just that standard input now refers to an actual file on disk
   instead of keyboard input. This is accomplished using the shell
-  input redirection operator `<`. For example, the grader might type the
-  following:
+  input redirection operator `<` or pipe `|`. For example, the grader 
+  might type either of the following to accomplish the same thing:
   ```
   $ java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt < tc01.in.txt
+  ```
+  ```
+  $ cat tc01.in.txt | java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt
   ```
   In this example, the shell forces the program to interpret standard input
   as the file `tc01.in.txt`. Instead of halting for user input, any method
@@ -566,37 +569,44 @@ non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing. 
 
 * **(100 points) Project Directory Structure:** The location of the default
-  package for the source code should be a direct subdirectory called `src`.
-  When the project is compiled, the `-d` option should be used with `javac`
-  to make the default package for compiled code a direct subdirectory
+  package for the source code should be a direct subdirectory of 
+  `cs1302-latin-squares` called `src`. When the project is compiled, 
+  the `-d` option should be used with `javac` to make the default package 
+  for compiled code a direct subdirectory of `cs1302-latin-squares` 
   called `bin`. 
   
-  If you follow this structure, then you might type the following to compile 
-  your code, assuming you are in the top-level project directory:
+  If you follow this structure, then you would type the following to compile 
+  your code, assuming you are in the top-level project 
+  directory `cs1302-latin-squares`:
   ```
   $ javac -cp bin -d bin src/cs1302/game/LatinSquaresGame.java
   $ javac -cp bin -d bin src/cs1302/game/LatinSquaresDriver.java
   ```
-  Or, you might accomplish the same thing with a single command similar to 
-  this:
-  ```
-  $ javac -cp bin -d bin src/cs1302/game/*.java
-  ```
+  Remember, when you compile `.java` files individually, there might be 
+  dependencies between the files. In such cases, the order in which you
+  compile the code matters.
 
 * **(100 points) Development Environment:** This project must be implemented 
   in Java 8, and it *must compile and run* correctly on Nike using the specific
   version of Java 8 that is setup according to the instructions provided
-  by your instructor (usually provided in the first homework assignment).
+  by your instructor. For Spring 2019, these instructions were posted on
+  Piazza [@29](https://piazza.com/class/jpupoaxnvvs497?cid=29).
   
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner` 
   object for `System.in` (i.e., for standard input) should be created. 
-  You are free to make `Scanner` objects for other inputs as needed.
+  You are free to make `Scanner` objects for other input sources as 
+  needed. Please note that if you create a new  `Scanner` object at
+  the beginning of a method or loop, then more than one object will
+  be created if the method is called more than once or if the loop
+  iterates more than once. 
   
 * **(100 points) No Static Variables:** Use of static variables is 
   not allowed for this assignment.
   
 * **(25 points) Code Style Guidelines:** You should be consistent with the style 
-  aspect of your code in order to promote readability. Besides consistency, the
+  aspect of your code in order to promote readability. All of the individual code
+  style guidelines listed below are part of a single non-functional requirement
+  that, like the others, is all or nothing. Besides consistency, the
   following conventions will be enforced:
   
   * **Reference type names are written in _UpperCamelCase_.** Class names are  

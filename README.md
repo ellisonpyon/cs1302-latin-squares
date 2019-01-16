@@ -601,7 +601,7 @@ point total. That is, they are all or nothing.
   iterates more than once. 
   
 * **(100 points) No Static Variables:** Use of static variables is 
-  not allowed for this assignment.
+  not allowed for this assignment. However, static constants are permitted.
   
 * **(25 points) Code Style Guidelines:** You should be consistent with the style 
   aspect of your code in order to promote readability. All of the individual code
@@ -633,6 +633,17 @@ point total. That is, they are all or nothing.
     * Command line input examples in a comment that may be cut-and-pasted into 
       a shell.
       
+    If you use Emacs, you can add the following to your `~/.emacs` file to 
+    highlight characters that exceed the column limit:
+    ```
+    ;; check for lines that exceed some column limit
+    (setq-default
+     whitespace-line-column 100
+     whitespace-style '(face lines-tail))
+    (add-hook 'prog-mode-hook #'whitespace-mode)
+    ```
+    You can create the `~/.emacs` file if it does not exist.
+      
   * **Method height <= window height.** You should limit the number of lines for
     a method so that the entire method can be seen on the screen at once. This
     includes the line(s) with the method's signature and opening curly brace, all
@@ -647,10 +658,10 @@ point total. That is, they are all or nothing.
     should be refactored to include propor looping constructs and/or broken
     up into smaller methods to improve readability. 
 
-* **Javadoc Documentation (25 points):** Each method and class needs to be documented
+* **Javadoc Documentation (25 points):** All methods and classes needs to be documented
   using Javadoc comments. At the very least, your comment should provide a description
   of the method's functionality in the first sentence of the comment.  This sentence
-  needs to be a gramatically correct English sentence with proper punctuation. Further 
+  needs to be a grammatically correct English sentence with proper punctuation. Further 
   description can be provided in subsequent sentence. The basic formatting of Javadoc 
   blocks is as seen in this example:
   ```java
@@ -667,8 +678,12 @@ point total. That is, they are all or nothing.
   The basic form is always acceptable. The single-line form may be substituted when 
   the entirety of the Javadoc block (including comment markers) can fit on a single
   line. More information about Javadoc can be found
-  [here](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/javadoc.html).
-  You are free to provide more information in in your Javadoc comments (e.g., such
+  [here](https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
+  It should be noted that we do expect you to provide a Javadoc comment for each class
+  in addition to a comment for each method within a class. The Javadoc comment
+  for a class is placed directly above the class declaration as seen in the examples
+  provided in the link referenced earlier. 
+  You are free to provide more information in in your Javadoc comments (e.g., such as
   parameter and return value documentation) as long as they are done using 
   proper Javadoc syntax. We will cover Javadoc comments in much more detail in a 
   later assignment.
@@ -734,7 +749,7 @@ Your choice will directly impact the work done in various methods throughout
 the class.
 
 **NOTE:** You should make the reference variable for standard input
-`Scanner` object a instance variable. This will help you stay in
+`Scanner` object an instance variable. This will help you stay in
 compliance with one of the non-functional requirements for this
 project. 
 
@@ -843,4 +858,3 @@ Copyright &copy; Michael E. Cotterell and the University of Georgia.
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> to students and the public.
 The content and opinions expressed on this page do not necessarily reflect the views of nor are they endorsed by the University of Georgia or the University System of Georgia.
 </small>
-

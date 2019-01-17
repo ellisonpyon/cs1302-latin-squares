@@ -683,7 +683,7 @@ point total. That is, they are all or nothing.
   in addition to a comment for each method within a class. The Javadoc comment
   for a class is placed directly above the class declaration as seen in the examples
   provided in the link referenced earlier. 
-  You are free to provide more information in in your Javadoc comments (e.g., such as
+  You are free to provide more information in your Javadoc comments (e.g., such as
   parameter and return value documentation) as long as they are done using 
   proper Javadoc syntax. We will cover Javadoc comments in much more detail in a 
   later assignment.

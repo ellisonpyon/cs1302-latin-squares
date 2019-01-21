@@ -374,7 +374,7 @@ user will type in their input. The prompt should look this:
 ```
 latin-squares: 
 ```
-where there is a single space after the `>`. When the user
+where there is a single space after the `:`. When the user
 types in their input, it should appear on the same line
 as the prompt. 
 

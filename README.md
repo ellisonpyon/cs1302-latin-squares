@@ -52,6 +52,9 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
 
+* **2019-01-23:** Added a clarification to the extra credit concerning the order
+  of the command-line arguments as well as the possible values for `k`.
+
 ## Project Description
 
 This first project is meant to ensure that you are able to apply and extend
@@ -717,6 +720,10 @@ description of each extra credit that should be checked.
   * `n` denotes the size of the square,
   * `k` denotes the number of pre-determined locations to generate, and
   * `c1 c2 c3 ...` denote the *n*-many characters that will be used.
+  
+  You may assume the order of the command-line arguments as presented
+  above. Additionally, you may assume valid input of command-line arguments
+  and that the value of `k` will be strictly less than `0.5 * n * n`.
   
   Use of the
   [`PrintWriter`](https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html)

@@ -285,7 +285,7 @@ try {
 
 You may need to import 
 [`FileNotFoundException`](https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html)
-(or use its fully qualified name) if modifying the code snippet above. 
+(or use its fully qualified name) if adapting the code snippet above. 
 Information about the `try` and `catch` blocks is provided in 
 Ch. 10 of the LDC4 textbook (see syllabus).
 

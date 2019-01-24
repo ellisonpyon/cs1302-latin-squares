@@ -210,7 +210,7 @@ The starting configuration for a game is provided in some readable
 text file adhering to a specific format, detailed below. For the
 purposes of defining the specification, we will first describe
 the file as containing *tokens* separated by *whitespace*. A token
-is simply a string of non-whitespace characrers, and whitespace
+is simply a string of non-whitespace characters, and whitespace
 is defined as a string of whitespace characters. A whitespace
 character is any character recognized by
 [`Character.isWhitespace`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-).

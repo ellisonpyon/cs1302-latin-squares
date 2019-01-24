@@ -276,13 +276,16 @@ try {
   File configFile = new File(config);
   Scanner configScanner = new Scanner(configFile);
   // use scanner here as usual
-} catch (Exception e) {
-  // handle some exception here
+} catch (FileNotFoundException e) {
+  // handle the exception here
   System.err.println(e);
   e.printStackTrace();
 } // try
 ```
 
+You may need to import 
+[`FileNotFoundException`](https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html)
+(or use its fully qualified name) if modifying the code snippet above. 
 Information about the `try` and `catch` blocks is provided in 
 Ch. 10 of the LDC4 textbook (see syllabus).
 

@@ -52,6 +52,9 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
 
+* **2019-02-25:** Added a clarification to the method height non-functional
+  requirement pertaining to comments.
+  
 * **2019-01-23:** Added a clarification to the extra credit concerning the order
   of the command-line arguments as well as the possible values for `k`.
 
@@ -654,7 +657,9 @@ point total. That is, they are all or nothing.
     a method so that the entire method can be seen on the screen at once. This
     includes the line(s) with the method's signature and opening curly brace, all
     lines in the body of the mthod (including blank lines), and the line with
-    the method's ending curly brace. 
+    the method's ending curly brace. The method height does not include a
+    method's Javadoc comment, however, it does include any comments contained
+    within the body of the method. 
     
     Of all the style guidelines, this is the probably the most subjective and 
     hardest to grade because everyone might have a different window size due

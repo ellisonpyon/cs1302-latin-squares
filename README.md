@@ -53,7 +53,9 @@ then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
 
 * **2019-02-25:** Added a clarification to the method height non-functional
-  requirement pertaining to comments.
+  requirement pertaining to comments. Also added an additional paragraph to
+  the [Suggestions](#suggestions) section concerning the refactoring of
+  code blocks into their own methods.
   
 * **2019-01-23:** Added a clarification to the extra credit concerning the order
   of the command-line arguments as well as the possible values for `k`.
@@ -666,7 +668,7 @@ point total. That is, they are all or nothing.
     to different terminal emulator and physical screen size configurations. 
     Therefore, graders will be checking for compliance with the spirit
     of this guideline, which is: methods that are too big and/or repetitive 
-    should be refactored to include propor looping constructs and/or broken
+    should be refactored to include proper looping constructs and/or broken
     up into smaller methods to improve readability. 
 
 * **Javadoc Documentation (25 points):** All methods and classes needs to be documented
@@ -748,7 +750,7 @@ description of each extra credit that should be checked.
 You should plan out your class before you begin to write it. While you already
 know a few things from the requirements that should be included in the class,
 there is a great deal more to actually consider. A class represents a kind of
-template or schematic for objects. This means that it needsto describe all of
+template or schematic for objects. This means that it needs to describe all of
 the things that an object would need in order to function properly. This
 includes both behavior, which is captured by methods, as well as state, which
 is captured by instance variables.
@@ -767,6 +769,18 @@ the class.
 `Scanner` object an instance variable. This will help you stay in
 compliance with one of the non-functional requirements for this
 project. 
+
+Finally, if you can point to a block of code in a method and describe what it
+does at a high level, then that block of code is a perfect candidate for
+refactoring into its own method. If you give the method a good name and a
+good Javadoc comment, then calling that method where the original block
+was placed will make your code more readable. If someone wants the details,
+then they can refer to the documentation for the method. For complicated
+loops, consider creating a method (with a good name) that handles a single
+iteration of the loop, then calling that method in your loop with appropriate
+parameter values. In many cases, this may be prefered over moving the loop
+itself into another method. The idea is to make your code easier to read for
+others as well as yourself.
 
 ## How to Download the Project
 

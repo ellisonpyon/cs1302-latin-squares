@@ -644,7 +644,7 @@ point total. That is, they are all or nothing.
     * Command line input examples in a comment that may be cut-and-pasted into 
       a shell.
       
-    If you use Emacs, you can add the following to your `~/.emacs` file to 
+    If you use Emacs, you can add the following lines to your `~/.emacs` file to 
     highlight characters that exceed the column limit:
     ```
     ;; check for lines that exceed some column limit
@@ -653,7 +653,9 @@ point total. That is, they are all or nothing.
      whitespace-style '(face lines-tail))
     (add-hook 'prog-mode-hook #'whitespace-mode)
     ```
-    You can create the `~/.emacs` file if it does not exist.
+    You can create the `~/.emacs` file if it does not exist. If you have
+    an `~/.emacs.el` or `~/.emacs.d/init.el` file, then you can place the lines 
+    in that file instead of `~/.emacs`.
       
   * **Method height <= window height.** You should limit the number of lines for
     a method so that the entire method can be seen on the screen at once. This
@@ -669,7 +671,24 @@ point total. That is, they are all or nothing.
     Therefore, graders will be checking for compliance with the spirit
     of this guideline, which is: methods that are too big and/or repetitive 
     should be refactored to include proper looping constructs and/or broken
-    up into smaller methods to improve readability. 
+    up into smaller methods to improve readability.
+    
+    If you use Emacs, you can add the following lines to your `~/.emacs` file to 
+    enable line numbers:
+    ```
+    ;; add line numbers
+    (global-linum-mode 1)
+    
+    ;; display line numbers and column numbers
+    (setq line-number-mode t)
+    (setq column-number-mode t)
+    
+    ;; make sure the line numbers don't touch the text
+    (setq linum-format "%d ")
+    ```
+    You can create the `~/.emacs` file if it does not exist. If you have
+    an `~/.emacs.el` or `~/.emacs.d/init.el` file, then you can place the lines 
+    in that file instead of `~/.emacs`. 
 
 * **Javadoc Documentation (25 points):** All methods and classes needs to be documented
   using Javadoc comments. At the very least, your comment should provide a description

@@ -13,7 +13,7 @@ at the University of Georgia.
 **Seriously. Read this entire file *before* starting.**
 
 ## Table of Contents
-
+* [Course-Specific Learning Outcomes](#course-specific-learning-outcomes)
 * [Academic Honesty](#academic-honesty)
 * [Updates](#updates)
 * [Project Description](#project-description)
@@ -38,6 +38,14 @@ at the University of Georgia.
 
 * **LO1.a:** Navigate and modify files, directories, and permissions in a multi-user Unix-like environment.
 * **LO1.b:** (Partial) Execute, redirect, pipe, and manage programs/processes in a multi-user Unix-like environment.
+* **LO1.c:** Create and modify text files and source code using a powerful terminal-based text editor such as Emacs or Vi.
+* **LO1.d:** (Partial)	Use shell commands to compile new and existing software solutions that are organized into multi-level 
+  packages and have external dependencies.
+* **LO2.b:** (Partial) Define, throw, and propagate exceptions appropriately in a software solution.
+* **LO3.a:** Create and update source code that adheres to established style guidelines.
+* **LO3.b:** (Partial) Create class, interface, method, and inline documentation that satisfies a set of requirements.
+* **LO7.c:** (Partial) Use common abstract data types and structures, including lists, queues, arrays, and stacks in solving 
+  typical problems.
 
 ## Academic Honesty
 

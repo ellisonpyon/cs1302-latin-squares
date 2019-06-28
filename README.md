@@ -34,6 +34,11 @@ at the University of Georgia.
 * [Submission Instructions](#submission-instructions)
 * [Appendix - Example Games](#appendix---example-games)
 
+## Course-Specific Learning Outcomes
+
+* **LO1.a:** Navigate and modify files, directories, and permissions in a multi-user Unix-like environment.
+* **LO1.b:** (Partial) Execute, redirect, pipe, and manage programs/processes in a multi-user Unix-like environment.
+
 ## Academic Honesty
 
 You agree to the Academic Honesty policy as outlined in the course syllabus. 

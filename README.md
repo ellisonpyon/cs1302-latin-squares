@@ -65,14 +65,6 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
 
-* **2019-02-25:** Added a clarification to the method height non-functional
-  requirement pertaining to comments. Also added an additional paragraph to
-  the [Suggestions](#suggestions) section concerning the refactoring of
-  code blocks into their own methods.
-  
-* **2019-01-23:** Added a clarification to the extra credit concerning the order
-  of the command-line arguments as well as the possible values for `k`.
-
 ## Project Description
 
 This first project is meant to ensure that you are able to apply and extend

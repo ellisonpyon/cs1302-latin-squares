@@ -635,7 +635,7 @@ point total. That is, they are all or nothing (no partial credit).
   
   **NOTE:** The [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide)
   includes instructions on how to use the `checkstyle` program to check
-  your code for compliance on Nike.
+  your code for compliance on Nike. 
 
 * **In-line Documentation (10 points):** Code blocks should be adequately documented
   using in-line comments. This is especially necessary when a block of code

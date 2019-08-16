@@ -1,4 +1,4 @@
-# CSCI 1302 - Latin Squares v2019.sp
+# CSCI 1302 - Latin Squares v2019.fa
 
 ![Unrelated image from "The illustrated companion to the Latin dictionary and Greek lexicon"](https://i.imgur.com/XUnNC0D.jpg)
 
@@ -313,14 +313,13 @@ When the game first starts, the following text should be displayed
 to standard output:
 
 ```
-  _           _   _        _____
- | |         | | (_)      / ____|
- | |     __ _| |_ _ _ __ | (___   __ _ _   _  __ _ _ __ ___  ___
- | |    / _` | __| | '_ \ \___ \ / _` | | | |/ _` | '__/ _ \/ __|
- | |___| (_| | |_| | | | |____) | (_| | |_| | (_| | | |  __/\__ \
- |______\__,_|\__|_|_| |_|_____/ \__, |\__,_|\__,_|_|  \___||___/
-                          CSCI 1302 | | v2019.sp
-                                    |_|
+ _       _   _                                           
+| | __ _| |_(_)_ __  ___  __ _ _   _  __ _ _ __ ___  ___ 
+| |/ _` | __| | '_ \/ __|/ _` | | | |/ _` | '__/ _ \/ __|
+| | (_| | |_| | | | \__ \ (_| | |_| | (_| | | |  __/\__ \
+|_|\__,_|\__|_|_| |_|___/\__, |\__,_|\__,_|_|  \___||___/
+                  CSCI 1302 |_| v2019.fa
+
 n = 3 { x, y, z }
 k = 2
 ```
@@ -592,7 +591,7 @@ not satisfied. In order to emphasize the importance of these requirements,
 non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing. 
 
-* **(100 points) Project Directory Structure:** The location of the default
+* **(10 or 100 points) Project Directory Structure:** The location of the default
   package for the source code should be a direct subdirectory of 
   `cs1302-latin-squares` called `src`. When the project is compiled, 
   the `-d` option should be used with `javac` to make the default package 
@@ -609,12 +608,16 @@ point total. That is, they are all or nothing.
   Remember, when you compile `.java` files individually, there might be 
   dependencies between the files. In such cases, the order in which you
   compile the code matters.
+  
+  **NOTE:** If your grader needs to modify your directory structure or
+  any of your filenames to compile your code, then the 10 point version
+  of this penalty will apply. If, however, your grader is unable to compile 
+  your code, then the 100 point version of this penalty applies.
 
 * **(100 points) Development Environment:** This project must be implemented 
   in Java 8, and it *must compile and run* correctly on Nike using the specific
   version of Java 8 that is setup according to the instructions provided
-  by your instructor. For Spring 2019, these instructions were posted on
-  Piazza [@29](https://piazza.com/class/jpupoaxnvvs497?cid=29).
+  by your instructor.
   
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner` 
   object for `System.in` (i.e., for standard input) should be created. 

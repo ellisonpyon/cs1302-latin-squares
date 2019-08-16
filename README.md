@@ -604,11 +604,14 @@ point total. That is, they are all or nothing (no partial credit).
   any of your filenames to compile your code, then the 10 point version
   of this penalty will apply. If, however, your grader is unable to compile 
   your code, then the 100 point version of this penalty applies.
+  Graders are instructed not to modify source code in an attempt to to make 
+  a submission compile.
 
 * **(100 points) Development Environment:** This project must be implemented 
   in Java 8, and it *must compile and run* correctly on Nike using the specific
   version of Java 8 that is setup according to the instructions provided
-  by your instructor.
+  by your instructor. Graders are instructed not to modify source code in 
+  an attempt to to make a submission compile.
   
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner` 
   object for `System.in` (i.e., for standard input) should be created. 

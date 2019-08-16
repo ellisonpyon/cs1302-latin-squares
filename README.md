@@ -276,7 +276,7 @@ z
   
 For the purposes of this assignment, you may safely assume that a
 correctly formated file will be used to provide the game's 
-starting configuration.
+starting configuration. **All three of the examples above are correctly formatted.**
   
 To read the file, let us assume that we have the path to the file
 stored in a `String` variable called `config` and use the

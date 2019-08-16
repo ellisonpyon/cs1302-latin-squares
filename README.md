@@ -5,7 +5,7 @@
 **DUE FRI 2019-02-01 (Feb 1) @ 11:55 PM**
 
 This repository contains the skeleton code for the Latin Squares project
-assigned to the students in the Spring 2019 CSCI 1302 classes
+assigned to the students in the Fall 2019 CSCI 1302 classes
 at the University of Georgia. 
 
 **Please read the entirety of this file before beginning your project.**

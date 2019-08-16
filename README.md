@@ -279,8 +279,8 @@ correctly formated file will be used to provide the game's
 starting configuration. **All three of the examples above are correctly formatted.**
   
 To read the file, let us assume that we have the path to the file
-stored in a `String` variable called `config` and use the
-following classes:
+stored in a `String` object referred to with a variable called 
+`config` and use the following classes:
 
 * [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) 
 * [`Scanner`](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
@@ -303,9 +303,7 @@ try {
 
 You may need to import 
 [`FileNotFoundException`](https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html)
-(or use its fully qualified name) if adapting the code snippet above. 
-Information about the `try` and `catch` blocks is provided in 
-Ch. 10 of the LDC4 textbook (see syllabus).
+(or use its fully qualified name) if adapting the code snippet above.
 
 #### Welcome Banner
 
@@ -393,7 +391,8 @@ of this document.
 #### Prompting the User
 
 Your game will display a prompt to the user at which the
-user will type in their input. The prompt should look this:
+user will type in their input. The prompt that your game will
+produce should look this:
 ```
 latin-squares: 
 ```

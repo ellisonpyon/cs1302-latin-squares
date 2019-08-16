@@ -627,116 +627,20 @@ point total. That is, they are all or nothing.
   be created if the method is called more than once or if the loop
   iterates more than once. 
   
-* **(100 points) No Static Variables:** Use of static variables is 
-  not allowed for this assignment. However, static constants are permitted.
+* **(0 points) [RECOMMENDED] No Static Variables:** Use of static variables
+  is not appropriate for this assignment. However, static constants are 
+  perfectly fine.
   
-* **(25 points) Code Style Guidelines:** You should be consistent with the style 
-  aspect of your code in order to promote readability. All of the individual code
+* **(10 points) Code Style Guidelines:** You should be consistent with the style 
+  aspect of your code in order to promote readability. 
+  
+  TODO
+  
+  All of the individual code
   style guidelines listed below are part of a single non-functional requirement
-  that, like the others, is all or nothing. Besides consistency, the
-  following conventions will be enforced:
-  
-  * **Reference type names are written in _UpperCamelCase_.** Class names are  
-    typically nouns or noun phrases. For example, `Character` or `ImmutableList`. 
-    Interface names may also be nouns or noun phrases (for example, `List`), but 
-    may sometimes be adjectives or adjective phrases instead (for example, 
-    `Readable`).
-  
-  * **Method names are written in _lowerCamelCase_.** Method names are also 
-    typically verbs or verb phrases. For example, `sendMessage` or `stop`.
-  
-  * **Braces are always used where optional.** Braces should be used with `if`, 
-    `else`, `for`, `do`, and `while` statements, even when the body is empty or 
-    contains only a single statement.
-    
-  * **Column limit: 100.** You should limit the number of characters, including
-    whitespace, on any given line to 100 characters. Except as noted below, any 
-    line that would exceed this limit must be manually line-wrapped in a
-    consistent manner. Exceptions to the column limit include:
-    
-    * Lines where obeying the column limit is not possible (for example, a long 
-      URL in Javadoc, or a long JSNI method reference).
-    * In `package` and `import` statements.
-    * Command line input examples in a comment that may be cut-and-pasted into 
-      a shell.
-      
-    If you use Emacs, you can add the following lines to your `~/.emacs` file to 
-    highlight characters that exceed the column limit:
-    ```
-    ;; check for lines that exceed some column limit
-    (setq-default
-     whitespace-line-column 100
-     whitespace-style '(face lines-tail))
-    (add-hook 'prog-mode-hook #'whitespace-mode)
-    ```
-    You can create the `~/.emacs` file if it does not exist. If you have
-    an `~/.emacs.el` or `~/.emacs.d/init.el` file, then you can place the lines 
-    in that file instead of `~/.emacs`.
-      
-  * **Method height <= window height.** You should limit the number of lines for
-    a method so that the entire method can be seen on the screen at once. This
-    includes the line(s) with the method's signature and opening curly brace, all
-    lines in the body of the mthod (including blank lines), and the line with
-    the method's ending curly brace. The method height does not include a
-    method's Javadoc comment, however, it does include any comments contained
-    within the body of the method. 
-    
-    Of all the style guidelines, this is the probably the most subjective and 
-    hardest to grade because everyone might have a different window size due
-    to different terminal emulator and physical screen size configurations. 
-    Therefore, graders will be checking for compliance with the spirit
-    of this guideline, which is: methods that are too big and/or repetitive 
-    should be refactored to include proper looping constructs and/or broken
-    up into smaller methods to improve readability.
-    
-    If you use Emacs, you can add the following lines to your `~/.emacs` file to 
-    enable line numbers:
-    ```
-    ;; add line numbers
-    (global-linum-mode 1)
-    
-    ;; display line numbers and column numbers
-    (setq line-number-mode t)
-    (setq column-number-mode t)
-    
-    ;; make sure the line numbers don't touch the text
-    (setq linum-format "%d ")
-    ```
-    You can create the `~/.emacs` file if it does not exist. If you have
-    an `~/.emacs.el` or `~/.emacs.d/init.el` file, then you can place the lines 
-    in that file instead of `~/.emacs`. 
+  that, like the others, is all or nothing. 
 
-* **Javadoc Documentation (25 points):** All methods and classes needs to be documented
-  using Javadoc comments. At the very least, your comment should provide a description
-  of the method's functionality in the first sentence of the comment.  This sentence
-  needs to be a grammatically correct English sentence with proper punctuation. Further 
-  description can be provided in subsequent sentence. The basic formatting of Javadoc 
-  blocks is as seen in this example:
-  ```java
-  /**
-   * Multiple lines of Javadoc text are written here,
-   * wrapped normally...
-   */
-  public int method(String p1) { ... }
-  ```
-  ... or in this single-line example:
-  ```java
-  /** An especially short bit of Javadoc. */
-  ```
-  The basic form is always acceptable. The single-line form may be substituted when 
-  the entirety of the Javadoc block (including comment markers) can fit on a single
-  line. More information about Javadoc can be found
-  [here](https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
-  It should be noted that we do expect you to provide a Javadoc comment for each class
-  in addition to a comment for each method within a class. The Javadoc comment
-  for a class is placed directly above the class declaration as seen in the examples
-  provided in the link referenced earlier. 
-  You are free to provide more information in your Javadoc comments (e.g., such as
-  parameter and return value documentation) as long as they are done using 
-  proper Javadoc syntax. We will cover Javadoc comments in much more detail in a 
-  later assignment.
-
-* **In-line Documentation (25 points):** Code blocks should be adequately documented
+* **In-line Documentation (10 points):** Code blocks should be adequately documented
   using in-line comments. This is especially necessary when a block of code
   is not immediately understood by a reader (e.g., yourself or the grader). 
 

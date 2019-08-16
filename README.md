@@ -589,7 +589,7 @@ The actual functionality is tested using test cases.
 A non-functional requirement is *subtracted* from your point total if
 not satisfied. In order to emphasize the importance of these requirements,
 non-compliance results in the full point amount being subtracted from your
-point total. That is, they are all or nothing. 
+point total. That is, they are all or nothing (no partial credit). 
 
 * **(10 or 100 points) Project Directory Structure:** The location of the default
   package for the source code should be a direct subdirectory of 
@@ -632,13 +632,12 @@ point total. That is, they are all or nothing.
   perfectly fine.
   
 * **(10 points) Code Style Guidelines:** You should be consistent with the style 
-  aspect of your code in order to promote readability. 
-  
-  TODO
-  
-  All of the individual code
-  style guidelines listed below are part of a single non-functional requirement
-  that, like the others, is all or nothing. 
+  aspect of your code in order to promote readability. Every `.java` file that
+  you include as part of your submission for this project must be in valid style 
+  as defined in the [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
+  All of the individual code style guidelines listed in that document are part 
+  of this single non-functional requirement. Like the other non-functional
+  requirements, this requirement is all or nothing.
 
 * **In-line Documentation (10 points):** Code blocks should be adequately documented
   using in-line comments. This is especially necessary when a block of code

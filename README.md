@@ -1,8 +1,10 @@
 # CSCI 1302 - Latin Squares v2019.fa
 
+![Approved for: Fall 2019](https://img.shields.io/badge/Approved%20for-Fall%202019-brightgreen)
+
 ![Unrelated image from "The illustrated companion to the Latin dictionary and Greek lexicon"](https://i.imgur.com/XUnNC0D.jpg)
 
-**DUE FRI 2019-02-01 (Feb 1) @ 11:55 PM**
+**DUE THU 2019-09-05 (Sep 5) @ 11:55 PM**
 
 This repository contains the skeleton code for the Latin Squares project
 assigned to the students in the Fall 2019 CSCI 1302 classes
@@ -724,7 +726,7 @@ On Nike, execute the following terminal command in order to download the project
 files into sub-directory within your present working directory:
 
 ```
-$ git clone https://github.com/cs1302uga/cs1302-latin-squares.git
+$ git clone --depth 1 https://github.com/cs1302uga/cs1302-latin-squares.git
 ```
 
 This should create a directory called <code>cs1302-latin-squares</code> in

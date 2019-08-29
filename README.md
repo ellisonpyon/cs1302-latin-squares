@@ -797,7 +797,7 @@ has the user immediately quit.
 $ java -cp bin cs1302.game.LatinSquaresDriver tests/tc01.config.txt < tests/tc01.in.txt
 ```
 
-### Test Case 03 (`tc02`)
+### Test Case 02 (`tc02`)
 
 This test case creates a *2-by-2* game with two pre-determined locations, then
 has the user immediately quit.

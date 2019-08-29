@@ -347,13 +347,21 @@ first move.
 above are intentional. You should include blank lines in those 
 locations in order to match expected output.
 
-Let *p* denote the smallest integer such that *10<sup>p</sup> >= n*. 
+**PADDING:** Let *p* denote the smallest integer such that *10<sup>p</sup> >= n*. 
 Then, each column displayed in the output when a square is displayed
 should take up *p+2* characters between each vertical bar (not including
 the vertical bars). In this scenario, the 3 characters that make up 
 the contents of a location should be aligned against the left vertical 
 bar. A clear exception to this is when *n = 1*, in which case we 
 assume that *p = 1*. 
+
+* For location numbers that appear on the top
+  row, each number is left aligned following a single white space 
+  after the vertical bar that appears on the next line. 
+  
+* For location numbers that appear to the left of the square, each
+  number is right aligned preceeding a single white space before 
+  the first vertical bar for the given line. 
 
 Here is an example when *n = 12* (which makes *p = 2*):
 ```

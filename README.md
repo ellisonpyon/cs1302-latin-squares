@@ -552,7 +552,7 @@ The actual functionality is tested using test cases.
   When a regular user plays the game, they specify a file with the
   starting configuration, e.g.,
   ```
-  $ java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt
+  $ java -cp bin cs1302.game.LatinSquaresDriver some/path/to/tc01.config.txt
   ```
   In this scenario, the user enters their commands into standard input
   and the game prints its output to standard output. 
@@ -566,10 +566,10 @@ The actual functionality is tested using test cases.
   input redirection operator `<` or pipe `|`. For example, the grader 
   might type either of the following to accomplish the same thing:
   ```
-  $ java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt < tc01.in.txt
+  $ java -cp bin cs1302.game.LatinSquaresDriver some/path/to/tc01.config.txt < some/path/to/tc01.in.txt
   ```
   ```
-  $ cat tc01.in.txt | java -cp bin cs1302.game.LatinSquaresDriver tc01.config.txt
+  $ cat some/path/to/tc01.in.txt | java -cp bin cs1302.game.LatinSquaresDriver some/path/to/tc01.config.txt
   ```
   In this example, the shell forces the program to interpret standard input
   as the file `tc01.in.txt`. Instead of halting for user input, any method
